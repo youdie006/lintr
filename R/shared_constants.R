@@ -92,7 +92,7 @@ get_fixed_string <- function(static_regex) {
   if (any(has_esc)) {
     static_regex[has_esc] <- vapply(
       static_regex[has_esc],
-      function(s) eval(parse(text = paste0('"', s, '"'))),
+      \(s) eval(parse(text = paste0('"', s, '"'))),
       character(1L),
       USE.NAMES = FALSE
     )
