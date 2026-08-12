@@ -23,9 +23,9 @@
 * `vector_logic_linter()` again finds `&&`/`||` usage in filtering expressions in function bodies like `\() filter(x, A && B)` (#3082, @MichaelChirico).
 * `seq_linter()` now flags `seq(1, n)` and `seq(from = 1, to = n)` calls, recommending `seq_len()` or `seq_along()` (#2661, @MichaelChirico).
 
-### Notes
+## Notes
 
-* `string_boundary_linter()` provides fixed-string replacements in its lint message and clarifies the reasons for inefficiency (#1333, @MichaelChirico).
+* `string_boundary_linter()` provides fixed-string replacements in its lint message, recommends `str_starts()`/`str_ends()` with `fixed()` for `{stringr}` calls, and clarifies the reasons for inefficiency (#1333, @MichaelChirico).
 
 # lintr (3.4.0)
 
